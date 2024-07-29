@@ -1,6 +1,7 @@
 package primeira_aula;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -44,6 +45,8 @@ public class Principal {
 		mapa.remove(20);
 		mapa.remove(35, "Claudia");
 		System.out.println(mapa.isEmpty());
+		
+		Collections.sort(null);
 		
 		
 	}
