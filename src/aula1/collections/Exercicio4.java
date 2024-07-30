@@ -10,17 +10,23 @@ public class Exercicio4 {
 
 	public static void main(String[] args) {
 
-		Map<Integer, String> mapa = new HashMap<>();
+		Map<Character, Integer> mapa = new HashMap<>();
 		String frase = JOptionPane.showInputDialog("Digite uma frase: ");
-		
 		for (int i = 0; i < frase.length(); i++) {
 			char letras = frase.charAt(i);
-			String teste = Character.toString(letras);
-			mapa.put(i, teste );
+			int cont = 0;
+
+			for (int j = 0; j < frase.length(); j++) {
+				if (frase.charAt(j) == letras) {
+					cont += 1;
+				}
+
+			}
+
+			mapa.put(letras, cont);
 		}
 
 		System.out.println(mapa);
-
 	}
 
 }

@@ -13,7 +13,7 @@ public class Exercicio2 {
 		Random random = new Random();
 		
 		
-		for (int i = 0; i < 51; i++) {
+		for (int i = 0; i < 50; i++) {
 			int n = random.nextInt(100);
 			num.add(n);
 		}
