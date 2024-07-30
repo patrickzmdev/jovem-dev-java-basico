@@ -11,11 +11,14 @@ public class Exercicio2 {
 		
 		if(frase1.equals(frase2)) {
 			JOptionPane.showMessageDialog(null, "As frases são iguais");
-			
+			JOptionPane.showMessageDialog(null, "As frases possuem: " + frase1.length() + " caracteres.");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "A primeira frase possui: " + frase1.length() + " caracteres.");
+			JOptionPane.showMessageDialog(null, "A segunda frase possui: " + frase2.length() + " caracteres.");
 		}
 		
-		JOptionPane.showMessageDialog(null, "A primeira frase possui: " + frase1.length() + " caracteres.");
-		JOptionPane.showMessageDialog(null, "A segunda frase possui: " + frase2.length() + " caracteres.");
+		
 
 		
 	}

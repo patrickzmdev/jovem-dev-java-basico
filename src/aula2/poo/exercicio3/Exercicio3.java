@@ -22,7 +22,7 @@ public class Exercicio3 {
 			
 			System.out.println("A data " + data + " caiu em: " + diaSemana);
 		}catch(DateTimeException e){
-			System.out.println("Ocorreu algum erro!");
+			System.out.println("Ocorreu algum erro na digitação!");
 		}
 		
 		
