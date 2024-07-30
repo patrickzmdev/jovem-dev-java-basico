@@ -15,8 +15,8 @@ public class Exercicio3 {
 		List<Integer> conjunto = new Random().ints(50,1,21).boxed().collect(Collectors.toList());
 		System.out.println(conjunto);
 		
-		Set<Integer> conjuntoFinal = new HashSet<>(conjunto);
-		System.out.println(conjuntoFinal);
+		Set<Integer> conjuntoOrd = new HashSet<>(conjunto);
+		System.out.println(conjuntoOrd);
   }
 
 }
