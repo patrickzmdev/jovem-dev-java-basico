@@ -2,11 +2,10 @@ package aula2.poo.desafio;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import javax.swing.JOptionPane;
 
@@ -14,33 +13,30 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		Set<List<String>> set = new HashSet<>();
-		List<Integer> list = new ArrayList<Integer>();
-		List<String> list2 = new ArrayList<String>();
-		Carro c = new Carro();
+		List<Carro> list = new ArrayList<>();
 		
 		
-		
+		String modelo ="";
 		do {
 
-			c.modelo = JOptionPane.showInputDialog("Digite o modelo do carro: ( caso queira sair digite fim) ");
-			if(c.modelo.equals("fim")) {
+			modelo = JOptionPane.showInputDialog("Digite o modelo do carro: ( caso queira sair digite fim) ");
+			if(modelo.equals("fim")) {
 				break;
 			}
-			c.ano = Integer.parseInt(JOptionPane.showInputDialog("Digite o ano de lançamento: "));
+			int ano = Integer.parseInt(JOptionPane.showInputDialog("Digite o ano de lançamento: "));
 
-			list.add(c.ano);
 			
-			
+			list.add(new Carro(modelo, ano));
 
-			Collections.sort(list2);
-			list2.add(c.modelo.toString());
-
-		} while (!c.modelo.equals("fim"));
-
-		set.add(list2);
-		System.out.println(set);
+		} while (!modelo.equals("fim"));
+		
+		Collections.sort(list, Comparator.comparingInt(carro -> carro.ano));
+		
+		for(Carro carro : list) {
+			System.out.println("Modelo: " + carro.modelo + ", Ano: " + carro.ano);
+		}
 
 	}
+	
 
 }

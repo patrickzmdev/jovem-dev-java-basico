@@ -12,7 +12,7 @@ public class Principal {
 		
 		Pessoa p2 = new Pessoa();
 		p2.nome = "Maria";
-		p2.dataNasc = LocalDate.of(1991, 1, 15);
+		p2.dataNasc = LocalDate.of(1993, 1, 15);
 		
 		if (p.dataNasc.equals(p2.dataNasc)) {
 			System.out.println("Nasceram no mesmo dia");

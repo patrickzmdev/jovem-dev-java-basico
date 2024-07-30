@@ -13,7 +13,12 @@ public class Principal {
 		Pessoa p2 = new Pessoa();
 		p2.nome = "Maria";
 		p2.dataNasc = LocalDate.of(2000, 1, 15);
-
+		
+		compararIdades(p,p2);
+		
+	}
+	public static void compararIdades(Pessoa p, Pessoa p2) {
+		
 		if (p.dataNasc.equals(p2.dataNasc)) {
 			System.out.println("Nasceram no mesmo dia");
 		} else if (p.dataNasc.isAfter(p2.dataNasc)) {
