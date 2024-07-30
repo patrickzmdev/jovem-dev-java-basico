@@ -15,7 +15,7 @@ public class Exercicio6 {
 		for (int i = 1; i < 6; i++) {
 			String nome = JOptionPane.showInputDialog("Insira o nome do aluno:");
 			
-			List<Double> notas = new ArrayList<Double>();
+			List<Double>notas = new ArrayList<Double>();
 			for(int j = 1; j < 4; j++) {
 				double n = Double.parseDouble(JOptionPane.showInputDialog("Digite a " + (j) + "°nota:"));
 				notas.add(n);
