@@ -12,7 +12,7 @@ public class Exercicio3 {
 
 	public static void main(String[] args) {
 		
-		List<Integer> conjunto = new Random().ints(50,1,21).boxed().collect(Collectors.toList());
+		List<Integer> conjunto = new Random().ints(50,1,20).boxed().collect(Collectors.toList());
 		System.out.println(conjunto);
 		
 		Set<Integer> conjuntoOrd = new HashSet<>(conjunto);
