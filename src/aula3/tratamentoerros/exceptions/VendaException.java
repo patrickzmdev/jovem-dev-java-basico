@@ -5,5 +5,9 @@ public class VendaException extends Exception {
 	public VendaException() {
 		super("A quantidade de itens não pode ser 0 nem maior que 10");
 	}
+	
+	public VendaException(String message) {
+        super(message);
+    }
 
 }

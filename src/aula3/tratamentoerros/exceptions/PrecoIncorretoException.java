@@ -5,4 +5,8 @@ public class PrecoIncorretoException extends IllegalArgumentException{
 	public PrecoIncorretoException() {
 		super("O preço do item deve ser maior que zero");
 	}
+	
+	public PrecoIncorretoException(String message) {
+        super(message);
+    }
 }
