@@ -13,7 +13,7 @@ public class Exercicio1 {
 				valor = Integer.parseInt(JOptionPane.showInputDialog("Digite um numero inteiro: "));
 				valida = true;
 			} catch (NumberFormatException e) {
-				System.err.println("O valor digitado não reconhecido");
+				System.err.println("Você digitou um valor não reconhecido");
 				
 			} 
 			
