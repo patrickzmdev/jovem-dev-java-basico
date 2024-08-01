@@ -12,15 +12,13 @@ public class Exercicio1 {
 		
 		Random random = new Random();
 		
-		for (int i =0; i < 51 ; i++) {
+		for (int i =1 ; i < 51 ; i++) {
 			int n = random.nextInt(100);
 			list.add(n);
 		
 		}
 		
-		list.forEach((Integer s) -> {
-			System.out.println(s);
-		});
+		list.forEach(System.out::println);
 	}
 
 }

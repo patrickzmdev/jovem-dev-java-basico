@@ -25,9 +25,7 @@ public class Exercicio2 {
 		
 		aluno.sort(Comparator.comparing(Aluno::getDataNascimento));
 		
-		aluno.forEach((Aluno) -> {
-			System.out.println(Aluno);
-		});
+		aluno.forEach(System.out::println);
 		
 		
 		
