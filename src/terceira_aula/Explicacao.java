@@ -9,12 +9,12 @@ public class Explicacao {
 	public static void main(String[] args)  {
 
 	
-		new Explicacao();
-		
-	
-	}
-
-	public Explicacao() throws NotaMaiorQueDezException  {
+//		new Explicacao();
+//		
+//	
+//	}
+//
+//	public Explicacao() throws NotaMaiorQueDezException  {
 
 //		try {
 //			Double d  = Double.parseDouble(JOptionPane.showInputDialog("digite um numero"));
@@ -38,20 +38,20 @@ public class Explicacao {
 
 		//////////////////// DISPARANDO EXCEÇÕES//////////////////////////////////////
 
-		try {
-			Double d = Double.parseDouble(JOptionPane.showInputDialog("Digite uma nota"));
-			if( d < 0) {
-				throw new IllegalArgumentException("Nota menor que zero");
-			}
-			if(d > 10) {
-				throw new NotaMaiorQueDezException();
-			}
-			System.out.println(d);
-		} catch (NullPointerException | IllegalArgumentException e) {
-			System.err.println("Digite um valor valido");
-			System.err.println(e.getMessage());
-		}
-		System.out.println("Continuando o programa");
+//		try {
+//			Double d = Double.parseDouble(JOptionPane.showInputDialog("Digite uma nota"));
+//			if( d < 0) {
+//				throw new IllegalArgumentException("Nota menor que zero");
+//			}
+//			if(d > 10) {
+//				throw new NotaMaiorQueDezException();
+//			}
+//			System.out.println(d);
+//		} catch (NullPointerException | IllegalArgumentException e) {
+//			System.err.println("Digite um valor valido");
+//			System.err.println(e.getMessage());
+//		}
+//		System.out.println("Continuando o programa");
 
 	}
 }
