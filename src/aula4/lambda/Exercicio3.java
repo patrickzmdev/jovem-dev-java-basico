@@ -19,7 +19,7 @@ public class Exercicio3 {
 			boolean valida = false;
 			while (!valida) {
 				try {
-					a.nome = JOptionPane.showInputDialog("Digite o nome do " + (i) + " aluno");
+					a.nome = JOptionPane.showInputDialog("Digite o nome do " + (i) + " aluno").toUpperCase();
 					a.numeroChamada = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero do " + (i) + " aluno"));
 					String data = JOptionPane
 							.showInputDialog("Digite a data de nascimento do " + i + "º aluno (AAAA-MM-DD)");
@@ -37,7 +37,7 @@ public class Exercicio3 {
 			}
 		}
 		
-		aluno.removeIf(Aluno -> Aluno.nome.startsWith("t") && Aluno.nome.endsWith("o"));
+		aluno.removeIf(Aluno -> Aluno.nome.startsWith("T") && Aluno.nome.endsWith("O"));
 		
 		
 		aluno.forEach(System.out::println);
