@@ -12,12 +12,29 @@ public class Exercicio3 {
 		
 		List<Aluno> aluno = new ArrayList<>();
 		
-		for ( int i = 1; i < 6; i++) {
+		for (int i = 1; i < 6; i++) {
 			Aluno a = new Aluno();
-			a.nome = JOptionPane.showInputDialog("Digite o nome do " +(i)+ " aluno");
-			a.numeroChamada =Integer.parseInt(JOptionPane.showInputDialog("Digite o numero do " +(i)+ " aluno"));
-			a.dataNascimento =Date.valueOf(JOptionPane.showInputDialog("Digite a data de nascimento: (yyyy-mm-dd)"));
-			aluno.add(a);
+			
+
+			boolean valida = false;
+			while (!valida) {
+				try {
+					a.nome = JOptionPane.showInputDialog("Digite o nome do " + (i) + " aluno");
+					a.numeroChamada = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero do " + (i) + " aluno"));
+					String data = JOptionPane
+							.showInputDialog("Digite a data de nascimento do " + i + "º aluno (AAAA-MM-DD)");
+					a.dataNascimento = Date.valueOf(data);
+					valida = true;
+
+				}catch(NumberFormatException e) {
+					JOptionPane.showMessageDialog(null, "Houve algum erro na digitação");
+				}
+				catch (IllegalArgumentException e) {
+					JOptionPane.showMessageDialog(null, "Data invalida. Tente novamente");
+				}
+
+				aluno.add(a);
+			}
 		}
 		
 		aluno.removeIf(Aluno -> Aluno.nome.startsWith("t") && Aluno.nome.endsWith("o"));

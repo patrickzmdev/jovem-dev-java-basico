@@ -67,13 +67,12 @@ public class Explicacao {
 	System.out.println(lista);
 	
 	
-//	FunctionalInterfaceCalculadora c1 = (v1,v2) -> v1 *v2;
-//	FunctionalInterfaceCalculadora c2 = (v1,v2) -> v1 /v2;
-//	FunctionalInterfaceCalculadora c3 = Math::pow;//Math.pow(v1,v2)
-//	System.out.println(c1.calcula(2.0,5.0));
-//	System.out.println(c2.calcula(2.0,5.0));
-//	System.out.println(c3.calcula(2.0,5.0));
-	
+	Calculadora c1 = (v1,v2) -> v1 *v2;
+	Calculadora c2 = (v1,v2) -> v1 /v2;
+	//Calculadora c3 = Math::pow;//Math.pow(v1,v2)
+	System.out.println(c1.calcula(2.0,5.0));
+	System.out.println(c2.calcula(2.0,5.0));
+
 	
 	
 	}

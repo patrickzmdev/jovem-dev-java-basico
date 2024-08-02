@@ -13,11 +13,15 @@ public class Desafio {
 	
 	for(int i = 1; i < 6; i++) {
 		String n = JOptionPane.showInputDialog("Digite uma palavra");
-		System.out.println(n);
 		lista.add(n);
 	}
 		System.out.println(lista);
+		
+		Mostrador mostrador = mensagem -> System.out.println(mensagem.toUpperCase());
 
+		for(String s : lista) {
+			mostrador.mostra(s);
+		}
 	}
 
 }
