@@ -26,7 +26,7 @@ public class Produto {
 
 	@Override
 	public String toString() {
-		return nome + "\nPreco: " + preco + "\nDescricao: " + descricao;
+		return nome + "\nPreco: " + String.format("%.2f", preco) + "R$\nDescricao: " + descricao;
 	}
 
 	public String getNome() {

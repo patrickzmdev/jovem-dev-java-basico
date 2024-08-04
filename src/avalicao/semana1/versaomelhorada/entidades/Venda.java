@@ -7,18 +7,28 @@ import java.util.Map;
 
 import javax.swing.JOptionPane;
 
+import avalicao.semana1.versaomelhorada.validacao.QuantidadeProduto;
+
 public class Venda {
 
 	List<Produto> listaCompra = new ArrayList<>();
 
-	public void buscaProduto(List<Produto> lista) {
+	public void buscaProduto(List<Produto> lista) throws QuantidadeProduto {
 
 		String nomeProduto = JOptionPane.showInputDialog("Digite o nome do produto que você deseja: ");
 		for (Produto p : lista) {
 			if (p.getNome().equalsIgnoreCase(nomeProduto)) {
 				JOptionPane.showMessageDialog(null, "Produto: " + p);
-				p.quantidade = Integer
-						.parseInt(JOptionPane.showInputDialog("Quantas unidades você deseja do produto: "));
+				try {
+					p.quantidade = Integer
+							.parseInt(JOptionPane.showInputDialog("Quantas unidades você deseja do produto: "));
+					if (p.quantidade < 1 || p.quantidade > 50) {
+						throw new QuantidadeProduto();
+					}
+				} catch (QuantidadeProduto e) {
+					JOptionPane.showMessageDialog(null, e.getMessage());
+					return;
+				}
 				listaCompra.add(p);
 				return;
 			}
@@ -35,19 +45,12 @@ public class Venda {
 		}
 	}
 
-
 	public double valorSubTotal() {
-		double valorTotal = 0;
-		for (Produto produto : listaCompra) {
-			valorTotal += produto.getPreco() * produto.getQuantidade();
-
-		}
-
-		return valorTotal;
+		return listaCompra.stream().mapToDouble(produto -> produto.getPreco() * produto.getQuantidade()).sum();
 	}
 
 	public String valorTotal(Double desc) {
-		return String.format("%.2f", valorSubTotal() * desc + valorSubTotal());
+		return String.format("%.2f", valorSubTotal() - valorSubTotal() * desc);
 
 	}
 
@@ -57,7 +60,7 @@ public class Venda {
 		System.out.println("--------------------CUPOM--------------------");
 		for (Produto produto : listaCompra) {
 			System.out.println(produto.getNome());
-			System.out.println(produto.getQuantidade() + "x " + produto.getPreco() + "  .........................  "
+			System.out.println(produto.getQuantidade() + "x " + String.format("%.2f", produto.getPreco()) + "  .........................  "
 					+ String.format("%.2f", produto.getQuantidade() * produto.getPreco()));
 			System.out.println();
 		}
@@ -82,7 +85,7 @@ public class Venda {
 				valida = true;
 				formPgto = "Dinheiro";
 			} else {
-				JOptionPane.showMessageDialog(null, "Dado inserido errado");
+				JOptionPane.showMessageDialog(null, "Dado inserido inexistente");
 				continue;
 			}
 		}
