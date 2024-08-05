@@ -17,7 +17,7 @@ public class Pessoa {
 
 	@Override
 	public String toString() {
-		return "Pessoa [nome=" + nome + ", telefone=" + telefone + ", dataNasc=" + dataNasc + "]";
+		return "Nome=" + nome + "" ;
 	}
 
 	public LocalDate getDataNasc() {
