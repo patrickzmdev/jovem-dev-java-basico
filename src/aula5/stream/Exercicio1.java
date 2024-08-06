@@ -12,7 +12,7 @@ public class Exercicio1 {
 		List<Integer> conjunto = new Random().ints(50,1,100).boxed().collect(Collectors.toList());
 		System.out.println(conjunto);
 		
-		double soma = conjunto.stream().reduce(0, (x,y) -> x + y);
+		double soma = conjunto.stream().mapToInt(Integer::intValue).sum();
 		System.out.println("Somatório: " + soma);
 	}
 
