@@ -14,7 +14,7 @@ public class Exercicio2 {
 		List<Integer>maiores50 = conjunto.stream().filter(p -> p >50).collect(Collectors.toList());
 		System.out.println(maiores50);
 		
-		double media = maiores50.stream().reduce(0, (x,y) -> x + y) / maiores50.size();
+		double media = maiores50.stream().mapToInt(Integer::intValue).average().orElse(0);
 		System.out.println(media);
 		
 		
