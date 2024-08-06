@@ -26,8 +26,7 @@ public class Desafio {
 		pessoas.forEach(System.out::println);
 
 		List<Pessoa> nomes = pessoas.stream()
-				.filter(p -> p.getNome().startsWith("A") || p.getNome().startsWith("E") || p.getNome().startsWith("I")
-						|| p.getNome().startsWith("O") || p.getNome().startsWith("U") || p.getDataNasc().isLeapYear())
+				.filter(p -> p.getNome().matches("[^AEIOU^]") || p.getDataNasc().isLeapYear())
 				.sorted(Comparator.comparing(Pessoa::getNome).reversed()).collect(Collectors.toList());
 		
 		
