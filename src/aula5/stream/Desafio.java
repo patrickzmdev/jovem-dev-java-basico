@@ -21,7 +21,7 @@ public class Desafio {
 				new Pessoa("Antonio", "942388121", LocalDate.parse("2005-04-03")),
 				new Pessoa("Felipe", "954388121", LocalDate.parse("2013-05-03")),
 				new Pessoa("Larissa", "9423488121", LocalDate.parse("2020-04-03")),
-				new Pessoa("Ursula", "9920188121", LocalDate.parse("2020-05-03")) };
+				new Pessoa("Ursula", "9920188221", LocalDate.parse("2020-05-03")) };
 
 		List<Pessoa> pessoas = Arrays.asList(pessoasLista);
 		Set<Character> vogais = new HashSet<>(Arrays.asList('A', 'E', 'I', 'O', 'U'));
@@ -32,7 +32,6 @@ public class Desafio {
 		List<Pessoa> nomes = pessoas.stream()
 				.filter(p -> p.getNome().matches("[^AEIOU^]") || p.getDataNasc().isLeapYear())
 				.sorted(Comparator.comparing(Pessoa::getNome).reversed()).collect(Collectors.toList());
-
 		String nome = pessoas.stream()
 				.filter(p -> vogais.contains(p.getNome().charAt(0)) || p.getDataNasc().isLeapYear())
                 .sorted((p1, p2) -> p2.getNome().compareTo(p1.getNome()))
