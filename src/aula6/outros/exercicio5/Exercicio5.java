@@ -9,7 +9,7 @@ public class Exercicio5 {
 
 	public static void main(String[] args) {
 
-		BigDecimal circunferencia = new BigDecimal(JOptionPane.showInputDialog("Digite o valor do raio: "));
+		BigDecimal circunferencia = new BigDecimal(JOptionPane.showInputDialog("Digite o valor da circunferencia: "));
 
 		BigDecimal pi = BigDecimal.valueOf(Math.PI);
 
