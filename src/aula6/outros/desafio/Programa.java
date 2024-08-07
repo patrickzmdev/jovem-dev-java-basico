@@ -27,6 +27,7 @@ public class Programa {
 				ev2.descricao = JOptionPane.showInputDialog("Digite qual era o nome de evento: ");
 
 				
+				
 				ev2.buscaEvento();
 				try {
 					String data = JOptionPane.showInputDialog("Digite a data nesse formato: DD/MM/AAAA HH:mm");

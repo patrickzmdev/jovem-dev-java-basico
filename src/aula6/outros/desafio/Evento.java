@@ -19,6 +19,7 @@ public class Evento {
 	public Evento() {
 
 	}
+	
 
 	public String getDescricao() {
 		return descricao;
