@@ -4,7 +4,7 @@ import java.util.function.BiFunction;
 
 public enum Calculadora2Enum {
 
-	SOMA("Adição"), SUBTRACAO("Subtração"), DIVISAO("Divisão"), MULTIPLICACAO("Multiplicação");
+	SOMA("Adição",(a,b) -> a + b), SUBTRACAO("Subtração",(a,b) -> a - b), DIVISAO("Divisão",(a,b) -> a / b), MULTIPLICACAO("Multiplicação",(a,b) -> a * b);
 	
 	private String nomeAmigavel;
 	private BiFunction<Integer, Integer, Integer> calculo;
@@ -14,6 +14,14 @@ public enum Calculadora2Enum {
 		this.calculo = calculo;
 	}
 	
+	public BiFunction<Integer, Integer, Integer> getCalculo() {
+        return calculo;
+    }
+	
+	public String getNomeAmigavel() {
+        return nomeAmigavel;
+    }
+
 	
 
 }
