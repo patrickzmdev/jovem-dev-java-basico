@@ -2,54 +2,31 @@ package aula6.outros.exercicio1;
 
 public enum DiaSemanaEnum {
 
-	SEGUNDA_FEIRA("Segunda-Feira") {
-		@Override
-		public boolean isFimDeSemana() {
-			return false;
-		}
-	}, TERCA_FEIRA("Terca-Feira") {
-		@Override
-		public boolean isFimDeSemana() {
-			return false;
-		}
-	}, QUARTA_FEIRA("Quarta-Feira") {
-		@Override
-		public boolean isFimDeSemana() {
-			return false;
-		}
-	},
-	QUINTA_FEIRA("Quinta-Feira") {
-		@Override
-		public boolean isFimDeSemana() {
-			return false;
-		}
-	}, SEXTA_FEIRA("Sexta-Feira") {
-		@Override
-		public boolean isFimDeSemana() {
-			return false;
-		}
-	}, SABADO("Sabado") {
-		@Override
-		public boolean isFimDeSemana() {
-			return true;
-		}
-	}, DOMINGO("Domingo") {
-		@Override
-		public boolean isFimDeSemana() {
-			return true;
-		}
-	};
+	SEGUNDA_FEIRA("Segunda-Feira",false), 
+	TERCA_FEIRA("Terca-Feira",false), 
+	QUARTA_FEIRA("Quarta-Feira",false),
+	QUINTA_FEIRA("Quinta-Feira",false), 
+	SEXTA_FEIRA("Sexta-Feira",false), 
+	SABADO("Sabado",true), 
+	DOMINGO("Domingo",true);
 
 	private String nome;
-	
+	private boolean fimDeSemana;
 
-	private DiaSemanaEnum(String nome) {
+	private DiaSemanaEnum(String nome, boolean fimDeSemana) {
 		this.nome = nome;
-		
+		this.fimDeSemana = fimDeSemana;
 
 	}
 	
-	public abstract boolean isFimDeSemana();
+//	public abstract boolean isFimDeSemana() {
+//		return fimDeSemana;
+//	};
+	
+//	@Override
+	public boolean isFimDeSemana() {
+		return fimDeSemana;
+	}
 
 	public String getNome() {
 		return nome;
