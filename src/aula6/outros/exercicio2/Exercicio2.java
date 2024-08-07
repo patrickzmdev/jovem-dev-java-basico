@@ -4,8 +4,9 @@ public class Exercicio2 {
 
 	public static void main(String[] args) {
 		
-		
-		System.out.println(Calculadora1Enum.SOMA.getCalcula());
+		int a = 10;
+		int b = 5;
+		System.out.println(Calculadora1Enum.SOMA.getCalcula(a+b));
 
 	}
 

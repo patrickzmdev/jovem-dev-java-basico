@@ -4,10 +4,10 @@ import java.util.function.Function;
 
 public enum Calculadora1Enum {
 	
-	SOMA("Adição", vb -> vb + 2 ),
-	SUBTRACAO("Subtração", vb -> vb + 2) ,
-	DIVISAO("Divisão", vb -> vb + 2),
-	MULTIPLICACAO("Multiplicação", vb -> vb + 2);
+	SOMA("Adição", (a, b) -> a + b ),
+	SUBTRACAO("Subtração", (a,b) -> a - b) ,
+	DIVISAO("Divisão", vb -> 1 + 2),
+	MULTIPLICACAO("Multiplicação", vb -> 1 + 2);
 	
 	private String nomeAmigavel;
 	private Function<Integer, Integer> calcula;
@@ -17,12 +17,12 @@ public enum Calculadora1Enum {
 		this.calcula = calcula;
 	}
 	
-	
-
-	public Function<Integer, Integer> getCalcula() {
+	public Function<Integer, Integer> getCalcula(int a, int b) {
 		
 		return calcula;
 	}
+	
+
 
 	
 	
