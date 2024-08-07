@@ -8,7 +8,7 @@ public class Exercicio1 {
 
 	public static void main(String[] args) {
 		
-		List<Integer> list = new ArrayList<Integer>(50);
+		List<Integer> list = new ArrayList<>(50);
 		
 		Random random = new Random();
 		
