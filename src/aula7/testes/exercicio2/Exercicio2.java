@@ -1,4 +1,4 @@
-package aula5.stream;
+package aula7.testes.exercicio2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.Objects;
 
 import aula5.stream.exceptions.ZeroBertoException;
 
-public class Exercicio5 {
+public class Exercicio2 {
 
 	public static void main(String[] args) throws ZeroBertoException {
 
@@ -23,7 +23,7 @@ public class Exercicio5 {
 		nomes.add("Antonio");
 		nomes.add("Joana");
 		
-		System.out.println(new Exercicio5().buscaPrimeiroNomeTerminadoEmBerto(nomes));
+		System.out.println(new Exercicio2().buscaPrimeiroNomeTerminadoEmBerto(nomes));
 		
 //		try {
 //		System.out.println(nomes.stream().filter(elemento -> elemento.endsWith("berto")).map(String::toUpperCase)

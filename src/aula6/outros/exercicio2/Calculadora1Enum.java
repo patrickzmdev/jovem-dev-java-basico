@@ -4,7 +4,9 @@ public enum Calculadora1Enum {
 
 	
 	
-	SOMA("Adição", (a, b) -> a + b), SUBTRACAO("Subtração", (a, b) -> a - b), DIVISAO("Divisão", (a, b) -> a / b),
+	SOMA("Adição", (a, b) -> a + b), 
+	SUBTRACAO("Subtração", (a, b) -> a - b), 
+	DIVISAO("Divisão", (a, b) -> a / b),
 	MULTIPLICACAO("Multiplicação", (a, b) -> a * b);
 
 	private String nomeAmigavel;
