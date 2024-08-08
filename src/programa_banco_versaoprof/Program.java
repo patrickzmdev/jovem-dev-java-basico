@@ -21,13 +21,13 @@ public class Program {
 		
 		System.out.println(accont);
 		
-		double depositValue = Double.parseDouble(JOptionPane.showInputDialog("Enter a deposit value:"));
+		double depositValue = Double.parseDouble(JOptionPane.showInputDialog("Enter a deposit value: "));
 		accont.deposit(depositValue);
-		JOptionPane.showMessageDialog(null, "Valor atualizado" + accont);
+		JOptionPane.showMessageDialog(null, "Valor atualizado " + accont);
 		
-		double withdrawValue = Double.parseDouble(JOptionPane.showInputDialog("Enter a withdraw value:"));
+		double withdrawValue = Double.parseDouble(JOptionPane.showInputDialog("Enter a withdraw value: "));
 		accont.withdraw(withdrawValue);
-		JOptionPane.showMessageDialog(null, "Valor atualizado" + accont);
+		JOptionPane.showMessageDialog(null, "Valor atualizado " + accont);
 	}
 
 }
