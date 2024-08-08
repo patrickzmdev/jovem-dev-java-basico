@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,23 +15,27 @@ import aula5.stream.Exercicio5;
 
 class Exercicio1Test {
 
-	private List<Pessoa> nomes;
+	
 	
 	
 	
 	@DisplayName("Testando o comportamento de uma lista vazia")
 	@Test
-	void retornaValorListaVazia() {
+	public void retornaValorListaVazia() {
 		
-		String retorno = Exercicio1.buscaVogal(nomes);
+		List<Pessoa> listaVazia = new ArrayList<Pessoa>();
+		String resultado = Exercicio1.buscaVogal(listaVazia);
+		assertEquals("", resultado);
 	}
 	
 	@DisplayName("Testando o comportamento de uma lista com elementos")
 	@Test
-	void retornaValorListaComElementos() {
+	public void retornaValorListaComElementos() {
 		
-		nomes.add(new Pessoa("Ana", "48 9999-1111", LocalDate.of(1998, 5, 1)));
-		String retorno = Exercicio1.buscaVogal(nomes);
+		List<Pessoa> lista = Exercicio1.gerarLista();
+		String resultado = Exercicio1.buscaVogal(lista);
+		String resultadoEsperado = "Igor; Gabriel; Eduardo; Carlos; Ana";
+		assertEquals(resultadoEsperado, resultado);
 		
 	
 	}
